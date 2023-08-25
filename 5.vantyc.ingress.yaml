@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+  namespace: vantyc
+  labels:
+    kcert.dev/ingress: "managed"      
+  annotations:
+    spec.ingressClassName: "nginx"
+spec:
+  rules:
+  - host: vantyc.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: vantyc-svc
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - vantyc.com
+    secretName: vantyc-tls
