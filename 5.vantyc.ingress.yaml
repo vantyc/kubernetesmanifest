@@ -6,7 +6,7 @@ metadata:
   labels:
     kcert.dev/ingress: "managed"      
   annotations:
-    spec.ingressClassName: "nginx"
+    kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
   - host: vantyc.com
