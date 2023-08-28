@@ -15,7 +15,7 @@ node {
                         sh "git config user.name VANTYCDeveloper"
                         //sh "git switch master"
                         sh "cat 3.vantyc.deployment.yaml"
-                        sh "sed -i 's+vantyc/vantyc.*+vantyc/vantyc:$DOCKERTAG+g' 3.vantyc.deployment.yaml"
+                        sh "sed -i 's+van-registry/vantyc.*+van-registry/vantyc:$DOCKERTAG+g' 3.vantyc.deployment.yaml"
                         sh "cat 3.vantyc.deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
