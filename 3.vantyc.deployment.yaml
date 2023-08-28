@@ -16,7 +16,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: nginx
+      - image: registry.gitlab.com/vantyc/van-registry/vantyc:51 
         name: nginx
         ports:
         - containerPort: 80
