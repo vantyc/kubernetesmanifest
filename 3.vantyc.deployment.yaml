@@ -16,7 +16,7 @@ spec:
         app: nginx
     spec:
       imagePullSecrets:
-      - name: gitlab-credentials
+      - name: gitlab-registry-credentials
       containers:
       - image: registry.gitlab.com/vantyc/van-registry/vantyc:51 
         name: nginx
