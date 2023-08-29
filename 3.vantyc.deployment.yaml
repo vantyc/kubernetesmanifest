@@ -18,7 +18,7 @@ spec:
       imagePullSecrets:
       - name: gitlab-registry-credentials
       containers:
-      - image: registry.gitlab.com/vantyc/van-registry/vantyc:51 
+      - image: registry.gitlab.com/vantyc/van-registry/vantyc:56
         name: nginx
         ports:
         - containerPort: 80
